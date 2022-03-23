@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+  </head>
+  <body>
+    <h1
+      id="text"
+      onmouseover="changeText()"
+      onmouseout="againText()"
+      style="background-color: yellow; width: 30%"
+    >
+      Hello World!
+    </h1>
+
+    <div
+      id="color"
+      style="background-color: blue; width: 30%; height: 30vh"
+      onclick="changeColor()"
+    ></div>
+    <p>Select a new country from the list.</p>
+    <select id="mySelect" onchange="myFunction()">
+      <option></option>
+      <option value="Flag-China">china</option>
+      <option value="Flag-Jordan">Jordan</option>
+      <option value="Flag-Korea">Korea</option>
+      <option value="switzerland-flag">Switzerland</option>
+    </select>
+    <img id="flag" style="width: 200px" />
+    <br><br><br>
+   <select name="fontFam" id="fontFam" onchange="selectFontFamily()">
+          <option value="Arial, Helvetica, sans-serif">Arial</option>
+          <option
+            value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+          >
+            Impact
+          </option>
+        </select>
+        <select name="fontSiz" id="fontSiz" onchange="selectFontSize()">
+          <option value="12px">12px</option>
+          <option value="20px">20px</option>
+        </select>
+
+        <label for="Italic"> Italic</label>
+        <input type="checkbox" onchange="italic()" id="Italic" name="Italic" />
+        <label for="Bold"> Bold</label>
+        <input type="checkbox" onchange="makeBold()" id="bold" name="Bold" />
+        <label for="Underline">Underline</label>
+        <input
+          type="checkbox"
+          id="underline"
+          name="Underline"
+          onchange="makeUnderLine()"
+        />
+         </div>
+    <div id="div2">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+    <br><br>
+    <form>
+      <div>
+        <label for="">Password (min 6 characters):</label>
+        <input type="password" id="password" onkeyup="checkPass()" />
+        <span id="validation"></span>
+      </div>
+
+      <div class="pass">
+        <label for="">Repeat password:</label>
+        <input type="password" id="passwordConfirm" onkeyup="checkConfirm()" />
+        <span id="confirmValidation"></span>
+      </div>
+      <input type="submit" id="submit" />
+    </form>
+
+    <script>
+      function changeText() {
+        document.getElementById("text").innerHTML = "Can I help you ?";
+      }
+      function againText() {
+        document.getElementById("text").innerHTML = "Hello World ?";
+      }
+      function changeColor() {
+        document.getElementById("color").style.background = "red";
+      }
+      function myFunction() {
+        let x = document.getElementById("mySelect").value;
+        document.getElementById("flag").src = `./img/${x}.jpg`;
+      }
+       function change() {
+        let x = document.getElementById("select").value;
+        document.getElementById("text1").style.fontFamily='Cursive';
+      }
+      const div2 =document.getElementById("div2")
+
+const selectFontFamily= () =>{
+    let textFontFamily = document.getElementById("fontFam").value;
+    div2.style.fontFamily = textFontFamily;
+}
+
+const selectFontSize= () =>{
+    let textFontSize =document.getElementById("fontSiz").value;
+    div2.style.fontSize = textFontSize ;
+}
+
+const italic= () =>{
+    let italicSelected = document.getElementById("Italic").checked;
+    italicSelected? div2.style.fontStyle = "italic": div2.style.fontStyle = "unset"
+}
+
+const makeBold= () =>{
+    let boldSelected = document.getElementById("bold").checked;
+    boldSelected?div2.style.fontWeight  = "bold" :div2.style.fontWeight  = "unset" ;
+}
+const makeUnderLine= () =>{
+    let underLineSelected = document.getElementById("underline").checked;
+    underLineSelected?div2.style.textDecoration = "underline":div2.style.textDecoration = "unset" ;
+}
+
+const checkPass = () => {
+  let x = document.getElementById("password").value;
+  if (x.length > 6 || x.length == 0) {
+    document.getElementById("validation").innerHTML = "";
+  } else if (x.length < 6) {
+    document.getElementById("validation").innerHTML = " Too Short";
+  }
+  x.length > 6 ? checkConfirm() : "";
+};
+
+const checkConfirm = () => {
+  let y = document.getElementById("passwordConfirm").value;
+  let x = document.getElementById("password").value;
+  if (x == y) {
+    document.getElementById("confirmValidation").innerHTML = "";
+    document.getElementById("submit").style.display = "block";
+  } else if (y.length > 0) {
+    document.getElementById("confirmValidation").innerHTML =
+      "the tow password don't match";
+    document.getElementById("submit").style.display = "none";
+  }
+};
+    </script>
+  </body>
+</html>
