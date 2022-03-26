@@ -76,58 +76,59 @@
     </form>
 
     <script>
-      function changeText() {
-        document.getElementById("text").innerHTML = "Can I help you ?";
-      }
-      function againText() {
-        document.getElementById("text").innerHTML = "Hello World ?";
-      }
-      function changeColor() {
-        document.getElementById("color").style.background = "red";
-      }
-      function myFunction() {
-        let x = document.getElementById("mySelect").value;
-        document.getElementById("flag").src = `./img/${x}.jpg`;
-      }
-       function change() {
-        let x = document.getElementById("select").value;
-        document.getElementById("text1").style.fontFamily='Cursive';
-      }
-      const div2 =document.getElementById("div2")
+//       function changeText() {
+//         document.getElementById("text").innerHTML = "Can I help you ?";
+//       }
+//       function againText() {
+//         document.getElementById("text").innerHTML = "Hello World ?";
+//       }
+//       function changeColor() {
+//         document.getElementById("color").style.background = "red";
+//       }
+//       function myFunction() {
+//         let x = document.getElementById("mySelect").value;
+//         document.getElementById("flag").src = `./img/${x}.jpg`;
+//       }
+//        function change() {
+//         let x = document.getElementById("select").value;
+//         document.getElementById("text1").style.fontFamily='Cursive';
+//       }
+//       const div2 =document.getElementById("div2")
 
-const selectFontFamily= () =>{
-    let textFontFamily = document.getElementById("fontFam").value;
-    div2.style.fontFamily = textFontFamily;
-}
+// const selectFontFamily= () =>{
+//     let textFontFamily = document.getElementById("fontFam").value;
+//     div2.style.fontFamily = textFontFamily;
+// }
 
-const selectFontSize= () =>{
-    let textFontSize =document.getElementById("fontSiz").value;
-    div2.style.fontSize = textFontSize ;
-}
+// const selectFontSize= () =>{
+//     let textFontSize =document.getElementById("fontSiz").value;
+//     div2.style.fontSize = textFontSize ;
+// }
 
-const italic= () =>{
-    let italicSelected = document.getElementById("Italic").checked;
-    italicSelected? div2.style.fontStyle = "italic": div2.style.fontStyle = "unset"
-}
+// const italic= () =>{
+//     let italicSelected = document.getElementById("Italic").checked;
+//     italicSelected? div2.style.fontStyle = "italic": div2.style.fontStyle = "unset"
+// }
 
-const makeBold= () =>{
-    let boldSelected = document.getElementById("bold").checked;
-    boldSelected?div2.style.fontWeight  = "bold" :div2.style.fontWeight  = "unset" ;
-}
-const makeUnderLine= () =>{
-    let underLineSelected = document.getElementById("underline").checked;
-    underLineSelected?div2.style.textDecoration = "underline":div2.style.textDecoration = "unset" ;
-}
+// const makeBold= () =>{
+//     let boldSelected = document.getElementById("bold").checked;
+//     boldSelected?div2.style.fontWeight  = "bold" :div2.style.fontWeight  = "unset" ;
+// }
+// const makeUnderLine= () =>{
+//     let underLineSelected = document.getElementById("underline").checked;
+//     underLineSelected?div2.style.textDecoration = "underline":div2.style.textDecoration = "unset" ;
+// }
 
-const checkPass = () => {
+function checkPass() {
   let x = document.getElementById("password").value;
-  if (x.length > 6 || x.length == 0) {
+  if (x.length > 6) {
     document.getElementById("validation").innerHTML = "";
-  } else if (x.length < 6) {
+  } else {
     document.getElementById("validation").innerHTML = " Too Short";
   }
-  x.length > 6 ? checkConfirm() : "";
+ 
 };
+
 
 const checkConfirm = () => {
   let y = document.getElementById("passwordConfirm").value;
@@ -141,6 +142,10 @@ const checkConfirm = () => {
     document.getElementById("submit").style.display = "none";
   }
 };
+var car ={
+  tit
+}
+k()
     </script>
   </body>
 </html>
