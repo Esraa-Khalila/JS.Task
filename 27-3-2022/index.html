@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <div class="input-container ic1">
+        <label for=""> Your name </label> <input id="name" type="text" />
+      </div>
+      <div class="input-container ic1">
+        <label for="">Your Age</label> <input id="age" type="text" />
+      </div>
+      <div class="input-container ic1">
+        <label for="">female </label> <input type="radio" name='gender' id="gender" onchange="localStorage.setItem('gender', 'female');"/>
+        <label for="">male </label> <input type="radio" name="gender" id="gender1" onchange="localStorage.setItem('gender', 'female');" />
+      </div>
+      <div class="input-container ic1">
+        <label for="">Brief Description</label> 
+        <input type="text" id="dec" />
+      </div>
+
+      <div class="input-container ic1">
+        <label for="">Your major and university</label>
+        <input type="text" id="major" />
+      </div>
+      <div class="input-container ic1">
+        <label for="">Birth Date </label>
+         <input type="text" id="Birth" />
+      </div>
+      <div class="input-container ic1">
+     
+        <input type="checkbox" id="check1" />  
+         <label>Html</label>
+       
+        <input type="checkbox" id="check2" /> 
+        <label>Css</label>
+       
+        <input type="checkbox" id="check3" /> 
+        <label>Html</label>
+      </div>
+      <div class="input-container ic1">
+       <label for="">your image </label> 
+       <input type="text" id="image">
+      </div>
+      <div class="input-container ic1">  
+         <label for="">  description your siblings</label>
+        <input type="text" id="image" />
+     
+      </div>
+      
+        <button onclick="sub()">Submit</button>
+      </div>
+    </form>
+    <div class="card">
+      <h5 id="num1"></h5>
+      <h5 id="num2"></h5>
+      <h5 id="num4"></h5>
+      <h5 id="num5"></h5>
+      <img id="num6" width="120x" />
+      <h5 id="num7"></h5>
+      <h5 id="num8"></h5>
+      <h5 id="num9"></h5>
+       <h5 id="num10"></h5>
+        <h5 id="num11"></h5>
+    </div>
+    <script>
+      function sub() {
+        let inputname = document.getElementById("name");
+        localStorage.setItem("name", inputname.value);
+
+        let inputAge = document.getElementById("age");
+        localStorage.setItem("age", inputAge.value);
+       
+        let inputdec = document.getElementById("dec");
+        localStorage.setItem("dec", inputdec.value);
+        let inputmajor = document.getElementById("major");
+        localStorage.setItem("major", inputmajor.value);
+        
+
+        let checkbox1 = document.getElementById("check1");
+        localStorage.setItem("check1", checkbox1.checked);
+        var checkbox2 = document.getElementById("check2");
+        localStorage.setItem("check2", checkbox2.checked);
+
+        var checkbox3 = document.getElementById("check3");
+        localStorage.setItem("check3", checkbox3.checked);
+
+        var inputimage = document.getElementById("image");
+        localStorage.setItem("image", inputimage.value);
+        let inputbirth = document.getElementById("Birth");
+        localStorage.setItem("Birth", inputbirth.value);
+        var inputsiblings = document.getElementById("siblings");
+        localStorage.setItem("siblings", inputsiblings.value);
+      }
+      document.getElementById("num1").innerHTML =
+        "your name :" + localStorage.getItem("name");
+      document.getElementById("num2").innerHTML = "your age :"+localStorage.getItem("age");
+      document.getElementById("num4").innerHTML = "your decription :"+localStorage.getItem("dec");
+      document.getElementById("num5").innerHTML ="your major :"+ localStorage.getItem("major");
+      document.getElementById("num6").src= localStorage.getItem("image");
+     
+      document.getElementById("num7").innerHTML = "Html :"+ localStorage.getItem("check1");
+      
+      document.getElementById("num8").innerHTML ="Css :"+ localStorage.getItem("check2");
+      document.getElementById("num9").innerHTML ="JS :"+ localStorage.getItem("check3");
+      document.getElementById("num10").innerHTML =
+        "your birth :"+localStorage.getItem("birth ");
+       document.getElementById("num11").innerHTML ="description siblings :"+ localStorage.getItem("siblings");
+        
+    </script>
+  </body>
+</html>

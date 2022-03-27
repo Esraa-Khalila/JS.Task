@@ -13,16 +13,16 @@ var persons = [
 ];
 
 persons[5] = {
-  name: { first: "Mohammed-Ameen", last: "Ababneh" },
+  name: { first: "Esraa", last: "Alkhalilah" },
   age: 25,
-  favorite_food: ["Magloba", "Mansaf", "Shawrma"],
+  favorite_food: ["burger", "Mansaf", "Shawrma"],
   favorite_movie: ["Your name", "Harry Potter", "1", "2", "3"],
 };
 
 persons[6] = {
-  name: { first: "Lujain", last: "Ababneh" },
+  name: { first: "Esraa1", last: "khalilah" },
   age: 25,
-  favorite_food: ["Magloba", "Mansaf", "Shawrma"],
+  favorite_food: ["mande", "burger", "Shawrma"],
   favorite_movie: ["Your name", "Harry Potter", "1", "2", "3"],
 };
 size = Object.keys(persons).length;
